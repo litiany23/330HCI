@@ -136,14 +136,72 @@
         <!-- START MAPS-->
         <div id="map"></div>
         <script>
-        var map, infoWindow;
+/*
+         function loadJSON(callback) {
+
+            var xobj = new XMLHttpRequest();
+                //xobj.overrideMimeType("application/json");
+            xobj.open('GET', 'locations.json', true); // Replace 'my_data' with the path to your file
+            xobj.onreadystatechange = function () {
+                  if (xobj.readyState == 4 && xobj.status == "200") {
+                    // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                    callback(xobj.responseText);
+                  }
+            };
+            xobj.send(null);
+         }
+
+         loadJSON(function(response) {
+           // Parse JSON string into object
+           var actual_JSON = JSON.parse(response);
+           console.log(actual_JSON);
+        });
+*/
+        /*
+        var locations = {"locations":[
+            { "Name":"Evanston police department", "Address":"1454 Elmwood Ave, Evanston, IL 60201", "Type":"police station" },
+            { "Name":"Northwestern University: University Police", "Address":"1201 Davis St, Evanston, IL 60201", "Type":"police station" },
+            { "Name":"Presence Saint Francis Hospital", "Address":"55 Ridge Ave, Evanston, IL 60202", "Type":"Hospital" },
+            { "Name":"Evanston Hospital", "Address":"2650 Ridge Ave, Evanston, IL 60201", "Type":"Hospital" },
+            { "Name":"NorthShore University HealthSystem", "Address":"1301 Central St, Evanston, IL 60201", "Type":"Hospital" },
+            { "Name":"Captain James A. Lovell Federal Health Care Center", "Address":"1942 Dempster St, Evanston, IL 60202", "Type":"Hospital" }
+        ]};
+        */
+
+       /*
+       var latlngs = [];
+       for (var i = 0; i < locations.length; i++) {
+         latlngs.push(getlatlng(locations[i].Address));
+       }
+
+       console.log(latlngs);
+       */
+
+
+
+       var map, infoWindow;
        function initMap() {
           map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 42.057, lng: -87.675},
-          zoom: 16,
+          zoom: 8,
         });
-        infoWindow = new google.maps.InfoWindow;
 
+        /*
+        function getlatlng(address) {
+          var geocoder = new google.maps.Geocoder();
+          geocoder.geocode(address, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+              console.log(results);
+            } else {
+              alert('Geocode was not successful for the following reason: ' + status);
+            }
+          });
+        }
+
+        getlatlng({'address':"1454 Elmwood Ave, Evanston, IL"});
+        */
+
+        infoWindow = new google.maps.InfoWindow;
 
       // Try HTML5 geolocation.
       if (navigator.geolocation){
@@ -162,7 +220,7 @@
           });
 
           infoWindow.setPosition(pos);
-          map.setCenter(pos);
+        //  map.setCenter(pos);
         }, function(){
           handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -170,6 +228,18 @@
         // Browser doesn't support geolocation
         handleLocationError(false, infoWindow, map.getCenter());
       }
+
+      // Place a marker for police station and Hospital
+      var psMarker = new google.maps.Marker({
+        map: map,
+        position: {lat: 42.047568, lng: -87.689453},
+        label: 'P'
+      });
+
+      var hspMarker = new google.maps.Marker({
+        map: map,
+        position: {lat: 42.065784, lng: -87.684681}
+      });
     }
 
     function handleLocationError(browserHasGeolocation, infoWindow, pos){
