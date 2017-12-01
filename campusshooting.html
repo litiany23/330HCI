@@ -1,0 +1,439 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Campus safety</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="web.html">Campus Safe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="contact/contact.html">Contact us</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="report/report.html">Report</a>
+            </li>
+            <div class="dropdown">
+              <button class="dropbtn">Map
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a onclick="setMarker(1)" href="web.html#mapSection" class="dropContent">Hospital</a>
+                <a onclick="setMarker(2)" href="web.html#mapSection" class="dropContent">Police Station</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="images/gunshooting.png" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1></h1>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="container marketing">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">Protect ourselves from campus shooting</span></h2>
+            <p class="lead">Campus shooting has been a serious issue of the US. People can get injured physically and mentally in those events. Read following tips and protect yourself and others from shooting incidents on campus.</p>
+
+            <!-- Three columns of text below the carousel -->
+            <!-- /.row -->
+
+          <!-- START THE FEATURETTES -->
+          <hr class="featurette-divider">
+
+          <!-- step one -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step1: Run away whenever possible.</span></h2>
+              <p class="lead">Your best chance to survive the shooting is to get out of the area as fast as possible.[1] Only rule this out if the only escape routes would put you in sight of the shooter.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-1.jpg" alt="Survive-a-School-Shooting-Step-1">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Two -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 2: Know the escape routes.</span></h2>
+              <p class="lead">Prepare in advance by identifying all exits from the rooms where you spend the most time. This includes emergency exits, fire escapes, and windows. Ideally, plan at least two escape routes out of the school or workplace, in case the shooter is blocking one of them.[2]
+              <br>Don't rule out second story windows, or windows that you would have to break. You can survive cuts from broken glass, or a broken leg from a fall.
+              98% of shooters act alone. If you can avoid the area where you hear gunfire, you are usually safe.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-2.jpg" alt="Survive-a-School-Shooting-Step-2">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Three -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 3: React immediately.</span></h2>
+              <p class="lead">Don't freeze up or waste time debating your options. Find an escape route, and start running. If you hear gunshots in the distance, you can likely get out of the area before the shooter arrives.
+              <br>If you have shoes that prevent you from running, take them off./p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-3.jpg" alt="Survive-a-School-Shooting-Step-3">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Four -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 4: Forget your belongings.</span></h2>
+              <p class="lead">If you've determined that it's best to run, then forget your wallet, your purse, or your cell phone. Though your first instinct may be to take your possessions with you, none of them are as important as your life.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-4.jpg" alt="Survive-a-School-Shooting-Step-4">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Five -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 5: Run directly to the exit.</span></h2>
+              <p class="lead">Do not slow yourself down with evasive maneuvers, such as running in a zig-zag or bending over as you run.[3] Run as fast as you can, directly to safety. These tactics only matter if the shooter is aiming directly at you, and using a weapon with a low rate of fire. Getting away fast is usually the better option.
+              <br>The one exception is a situation where you are forced to run within sight of the shooter, in an area with plenty of cover between you and the exit. In this case, running from obstacle to obstacle may be your best chance.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-5.jpg" alt="Survive-a-School-Shooting-Step-5">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Six -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 6: Bring people with you. </span></h2>
+              <p class="lead">As you're running, encourage others to run. If someone looks disoriented or too scared to move, grab that person and drag him with you. Tell the people that running is crucial to their survival. If you're running in a bigger group, it'll be harder to target you individually, and you'll have strength in numbers if you do run up against the shooter.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-6.jpg" alt="Survive-a-School-Shooting-Step-6">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Seven -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 7: Grab a weapon only if convenient.</span></h2>
+              <p class="lead">If you happen to see a sharp object, or a blunt object you can carry while running, grab it. Do not waste time looking for one of these when you could be running. This is only for a last case scenario when you are unable to escape the shooters.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-7.jpg" alt="Survive-a-School-Shooting-Step-7">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Eight -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 8: If you have to fight, close distance is your friend.</span></h2>
+              <p class="lead">Get as close as you can without being noticed. Grab the barrel with 1 hand and cover the ejection port with the other (try to to keep the muzzle pointed in a safe direction). The shooter will pull the trigger and the gun will fire, but only once because the hand covering the ejection port will cause a malfunction and the weapon will not cycle another round. That weapon is now a useless hunk of metal until the shooter can clear and cycle another round in manually (perfect opportunity for you to take the weapon away and subdue the shooter).</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-8.jpg" alt="Survive-a-School-Shooting-Step-8">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Nine -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 9: Choose this course of action if running is impossible.</span></h2>
+              <p class="lead">It should only take a few seconds to determine if running is a possibility. If the shooter is rapidly approaching your room, or if he is blocking the only escape route, start hiding or barricading yourself in immediately.
+              <br>Hiding is the second option because it traps you in one area. However, most mass shooting events are over within ten or fifteen minutes. If you can avoid the shooter for that long, you have a good chance at surviving.[4]</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-9.jpg" alt="Survive-a-School-Shooting-Step-9">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Ten -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 10: Split tasks with other people in the room.</span></h2>
+              <p class="lead">If there are other people in the room, get their attention and assign them to the following tasks (each described in more detail below):
+              <br>One person should call 9-1-1 (or the emergency number in your region).
+              <br>One group of people should lock and barricade the door.
+              <br>One group of people should grab anything that could be used as a weapon.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-10.jpg" alt="Survive-a-School-Shooting-Step-10">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Eleven -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 11: Turn off the lights.</span></h2>
+              <p class="lead">Immediately turn off the lights in the room where you are. This will make the shooter less likely to enter the room, and slightly increase your chance of survival if he does.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-11.jpg" alt="Survive-a-School-Shooting-Step-11">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Twelve -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 12: Lock and barricade the door.</span></h2>
+              <p class="lead">Lock the door immediately and do anything you can to make it more difficult for the shooter to enter. Remember that most shooters only have a few minutes before the police show up, and they're not interested in taking the path of most resistance. Lock the door, place a doorstop on it, and place all heavy furniture like desks and chairs in front of the door immediately to deter the shooter.
+              <br>If the shooter is approaching, get away from the door as soon as you can. Stay away from all doors and windows.
+              <br>If the door opens to the outside, a barricade will only delay the shooter for a moment. Building one may not be worth wasting time and blocking a potential escape route.
+              <br>If you're in a bathroom that doesn't lock, loop a belt or T-shirt around the arms of the door butler (the metal hinge on top of the door that allows it to open).</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-12.jpg" alt="Survive-a-School-Shooting-Step-12">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Thirteen -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 13: Call emergency services.</span></h2>
+              <p class="lead">A mass shooting typically continues for five minutes before anyone calls the police. If you have other people in the room to barricade the door, calling immediately can be a big help. Once they've been called, law enforcement typically arrives within three minutes.[5]
+              <br>Use a landline instead of your cell phone if possible, so the police can automatically trace the call.
+              <br>If you can't reach an emergency service, look for a ceiling sprinkler system and try to set it off by holding a lighter underneath the detector. This should automatically call the fire department.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-13.jpg" alt="Survive-a-School-Shooting-Step-13">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Fourteen -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 14: Grab any weapons you can find.</span></h2>
+              <p class="lead">Look around the room where you're hiding and find anything that you can use as a weapon. It can be a stapler or sharp scissors you find on the teacher's desk, the hot coffee in the kitchen of your office, beakers or dangerous acids (such as sulphuric) in a science room, or anything that is sharp, heavy, made of glass, or which can be used as a weapon. Hold on to these weapons if the shooter enters the room where you are.
+              <br>Even small thrown objects can delay a gunman if a large group of people work together. While this is obviously a last resort, anyone who can't find a weapon should grab something to throw.[6]</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-14.jpg" alt="Survive-a-School-Shooting-Step-14">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Fifteen -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 15: Find cover. </span></h2>
+              <p class="lead">The term cover refers to barriers that will stop a bullet. Brick or concrete walls, steel building support beams, or thick trees are the most common examples.[7] If you are trapped in a single room, your best option is a thick piece of furniture such as a heavy desk or filing cabinet.
+              <br>Ideally, find a spot that does not restrict your movement. If the situation changes, you want to be able to run to an exit as fast as possible.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-15.jpg" alt="Survive-a-School-Shooting-Step-15">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Sixteen -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 16: Find concealment if cover is not available.</span></h2>
+              <p class="lead">Concealment hides you from the shooter's line of sight, but will not protect you from gunfire. If it's your only option, hide behind furniture, in closets, or in any other hiding spot. Crouch low to the ground to minimize the chance that a stray bullet hits you.
+              <br>Most interior walls will not stop a bullet.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-16.jpg" alt="Survive-a-School-Shooting-Step-16">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Seventeen -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 17: Turn off anything that makes noise.</span></h2>
+              <p class="lead">If you have time, silence your cell phone and other electronics so the sound won't encourage the shooter to approach you.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-17.jpg" alt="Survive-a-School-Shooting-Step-17">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Eighteen -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 18: Try to stay calm.</span></h2>
+              <p class="lead">Though this may seem nearly impossible, it's crucial that you remain absolutely silent. Tell people that whimpering or crying will only make the shooter more likely to find you. Be mentally prepared for the event that the shooter comes into the room and finds you. In that case, you'll have no choice but to fight, as described below.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-18.jpg" alt="Survive-a-School-Shooting-Step-18">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Nineteen -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 19: Play dead as a last resort.</span></h2>
+              <p class="lead">People have survived mass shootings by playing dead in areas where shots have been fired.[8] However, some shooters are aware of this tactic and will target bodies.[9] The only time you should try this is when both running and hiding are impossible.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-19.jpg" alt="Survive-a-School-Shooting-Step-19">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Twenty -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 20: Remember that attacking the shooter is your final option.</span></h2>
+              <p class="lead">You shouldn't jump out of your hiding place and attack the shooter if he's approaching. You should only fight him if you're sure that you'll be shot if you do nothing.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-20.jpg" alt="Survive-a-School-Shooting-Step-20">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Twenty-one -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 21: Do not try to reason with the shooter or plead for your life.</span></h2>
+              <p class="lead">Trying to engage with the shooter, ask him what he's doing, or to plead for your life by talking about your family has not been proven effective in dealing with shooters. Don't waste your time by trying to talk to him -- you're much better off fighting.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-21.jpg" alt="Survive-a-School-Shooting-Step-21">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Twenty-two -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 22: Work with others to create confusion.</span></h2>
+              <p class="lead">If you are in a group of people and cannot avoid the shooter, your best chance is to create as much noise and movement as possible. Shouting, throwing objects, and running will buy you a few extra seconds to leave the room, or to attack the shooter if there is no escape route.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-22.jpg" alt="Survive-a-School-Shooting-Step-22">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Twenty-three -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 23: Attack the shooter with any weapon you can.</span></h2>
+              <p class="lead">Use scissors, glass, or any other sharp or heavy objects to attack the shooter as soon as you are in close proximity. Even a sharp ballpoint pen is better than nothing. You're fighting for your life and every second counts.
+              <br>Once again, this is an absolute last resort. Most shooters are heavily armed, and some wear body armor. Even if you have a gun of your own, you are most likely at a disadvantage.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-23.jpg" alt="Survive-a-School-Shooting-Step-23">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Twenty-four -->
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading"><span class="text-muted">Step 24: Aim high.</span></h2>
+              <p class="lead">Try to hurt the shooter in the face, eyes, shoulders, or neck, or arms, so that they are more likely to let go of their weapon. You should stab them in the neck, gouge out their eyes, or stab them in the arm -- doing anything you can to make them get rid of the weapon or to hurt them so the weapon is within your reach.
+              <br>Kick him in the crotch (if they are a man) If you can't, go for their face or weapon. This will be an effective way to disarm him and to cause him a large amount of pain.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-24.jpg" alt="Survive-a-School-Shooting-Step-24">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- step Twenty-five -->
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><span class="text-muted">Step 25: Commit to the attack.</span></h2>
+              <p class="lead">Once you are in this situation, hesitation or panic can be fatal. Be as aggressive as possible, attacking with anything you can. Do not try to run or stop fighting, even if you are shot in the leg or arm.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="images/Survive-a-School-Shooting-Step-25.jpg" alt="Survive-a-School-Shooting-Step-25">
+            </div>
+          </div>
+
+          <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+
+        <hr class="featurette-divider">
+
+        <!-- FOOTER -->
+        <footer class="container">
+          <p class="float-right"><a href="#">Back to top</a></p>
+          <p>&copy; 2017 Flash. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+
+      </main>
+
+
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+      <script src="assets/js/vendor/popper.min.js"></script>
+      <script src="dist/js/bootstrap.min.js"></script>
+      <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+      <script src="assets/js/vendor/holder.min.js"></script>
+      <script src="Map/map.js"></script>
+        </body>
+      </html>
